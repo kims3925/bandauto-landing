@@ -190,8 +190,11 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
   color: var(--primary);
 }
 @media (max-width: 520px) {
-  .hero-sample { flex-direction: column; gap: 14px; padding: 16px 20px; }
-  .hero-sample-info { text-align: center; }
+  .hero-sample { gap: 16px; padding: 14px 18px; }
+  .hero-sample-img { width: 100px; height: 100px; }
+  .hero-sample-title { font-size: 13px; }
+  .hero-sample-desc { font-size: 12px; }
+  .hero-sample-url { font-size: 12px; }
 }
 
 /* ── Value Cards ── */
@@ -213,7 +216,13 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
 .value-card:nth-child(3) .value-icon { background: rgba(16,185,129,0.1); }
 .value-card h3 { margin-bottom: 10px; font-size: 18px; }
 .value-card p { color: var(--text-secondary); font-size: 15px; line-height: 1.65; }
-@media (max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .values-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; }
+  .value-card { padding: 16px 12px; }
+  .value-icon { width: 40px; height: 40px; font-size: 18px; margin-bottom: 10px; border-radius: 10px; }
+  .value-card h3 { font-size: 13px; margin-bottom: 6px; }
+  .value-card p { font-size: 12px; line-height: 1.5; }
+}
 
 /* ── Steps ── */
 .steps { background: var(--bg-alt); }
@@ -247,6 +256,13 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
 .step-detail-link:hover { gap: 10px; }
 @media (max-width: 768px) {
   .step-card { flex-direction: column; gap: 16px; padding: 24px; }
+  .step-detail-link { font-size: 18px; font-weight: 700; }
+  .steps { padding: 40px 0; }
+  .steps-list { margin-top: 28px; gap: 14px; }
+  .values { padding: 40px 0; }
+  section { padding: 40px 0; }
+  .hero { padding: 100px 0 50px; }
+  .testimonials-header { margin-bottom: 24px; }
 }
 
 /* ── CTA (Mid / Bottom) ── */
@@ -365,11 +381,17 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
 }
 @media (max-width: 768px) {
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
     padding: 0 4px;
   }
-  .testimonials { padding: 56px 0; }
-  .testimonial-card { padding: 22px 20px 20px; }
+  .testimonials { padding: 40px 0; }
+  .testimonial-card { padding: 16px 14px 14px; }
+  .testimonial-quote { font-size: 13px; line-height: 1.6; margin-bottom: 14px; }
+  .testimonial-stars { font-size: 13px; margin-bottom: 8px; }
+  .testimonial-avatar { width: 32px; height: 32px; font-size: 14px; }
+  .testimonial-name { font-size: 12px; }
+  .testimonial-role { font-size: 11px; }
 }
 
 /* ── Footer ── */
@@ -579,69 +601,6 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
   </div>
 </section>
 
-<!-- ═══ 5 Steps ═══ -->
-<section class="steps" id="steps">
-  <div class="container">
-    <div style="text-align:center;">
-      <span class="section-label">5단계 자동화 프로세스</span>
-      <h2>소싱부터 발주까지,<br>끊기지 않는 자동 루프</h2>
-    </div>
-    <div class="steps-list">
-
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <span class="step-tag">Smart Sourcing</span>
-          <h3>스마트 소싱</h3>
-          <p>도매 밴드의 신규 상품을 실시간 모니터링하여 원하는 상품만 내 보관함으로 즉시 수집합니다. 사진을 일일이 저장하고 수정하는 작업, 이제 클릭 한 번이면 끝입니다.</p>
-          <a href="step1.html" class="step-detail-link">자세히 보기 →</a>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <span class="step-tag">AI Intelligence</span>
-          <h3>AI 콘텐츠 & 자동 가격 책정</h3>
-          <p>AI가 도매가를 분석해 최적 소매가를 자동 책정하고, 구매 욕구를 자극하는 상세페이지를 자동 생성합니다. 복잡한 마진 계산과 디자인 작업은 AI 담당입니다.</p>
-          <a href="step2.html" class="step-detail-link">자세히 보기 →</a>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <span class="step-tag">Omni-Channel Posting</span>
-          <h3>자동 상품 등록</h3>
-          <p>가공된 상품 정보를 자사몰과 소매 밴드에 동시에 업로드합니다. 밴드 게시물에는 전용 결제 링크가 자동 탑재되어, 고객이 어디서든 바로 결제 가능합니다.</p>
-          <a href="step3.html" class="step-detail-link">자세히 보기 →</a>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">4</div>
-        <div class="step-body">
-          <span class="step-tag">Unified Order</span>
-          <h3>통합 주문 관리</h3>
-          <p>소매 밴드를 통해 들어온 모든 주문이 쇼핑몰로 자동 수집됩니다. 주문 확인, 옵션 선택까지 누락 없이 실시간으로 기록합니다. 댓글 주문서에 밤샐 일이 사라집니다.</p>
-          <a href="step4.html" class="step-detail-link">자세히 보기 →</a>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">5</div>
-        <div class="step-body">
-          <span class="step-tag">One-Click Fulfillment</span>
-          <h3>원클릭 발주</h3>
-          <p>수집된 주문을 클릭 한 번으로 도매처별 맞춤 양식(엑셀/텍스트)으로 변환하여 발주서를 생성합니다. 수백 건의 주문도 버튼 하나면 발주 준비 끝입니다.</p>
-          <a href="step5.html" class="step-detail-link">자세히 보기 →</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ═══ Testimonials ═══ -->
 <section class="testimonials" id="testimonials">
   <div class="container">
@@ -720,6 +679,69 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
             <div class="testimonial-name">참좋은먹거리 윤사장님</div>
             <div class="testimonial-role">광주 · 가공식품 소싱 밴드</div>
           </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5 Steps ═══ -->
+<section class="steps" id="steps">
+  <div class="container">
+    <div style="text-align:center;">
+      <span class="section-label">5단계 자동화 프로세스</span>
+      <h2>소싱부터 발주까지,<br>끊기지 않는 자동 루프</h2>
+    </div>
+    <div class="steps-list">
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <span class="step-tag">Smart Sourcing</span>
+          <h3>스마트 소싱</h3>
+          <p>도매 밴드의 신규 상품을 실시간 모니터링하여 원하는 상품만 내 보관함으로 즉시 수집합니다. 사진을 일일이 저장하고 수정하는 작업, 이제 클릭 한 번이면 끝입니다.</p>
+          <a href="step1.html" class="step-detail-link">자세히 보기 →</a>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <span class="step-tag">AI Intelligence</span>
+          <h3>AI 콘텐츠 & 자동 가격 책정</h3>
+          <p>AI가 도매가를 분석해 최적 소매가를 자동 책정하고, 구매 욕구를 자극하는 상세페이지를 자동 생성합니다. 복잡한 마진 계산과 디자인 작업은 AI 담당입니다.</p>
+          <a href="step2.html" class="step-detail-link">자세히 보기 →</a>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <span class="step-tag">Omni-Channel Posting</span>
+          <h3>자동 상품 등록</h3>
+          <p>가공된 상품 정보를 자사몰과 소매 밴드에 동시에 업로드합니다. 밴드 게시물에는 전용 결제 링크가 자동 탑재되어, 고객이 어디서든 바로 결제 가능합니다.</p>
+          <a href="step3.html" class="step-detail-link">자세히 보기 →</a>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <span class="step-tag">Unified Order</span>
+          <h3>통합 주문 관리</h3>
+          <p>소매 밴드를 통해 들어온 모든 주문이 쇼핑몰로 자동 수집됩니다. 주문 확인, 옵션 선택까지 누락 없이 실시간으로 기록합니다. 댓글 주문서에 밤샐 일이 사라집니다.</p>
+          <a href="step4.html" class="step-detail-link">자세히 보기 →</a>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <span class="step-tag">One-Click Fulfillment</span>
+          <h3>원클릭 발주</h3>
+          <p>수집된 주문을 클릭 한 번으로 도매처별 맞춤 양식(엑셀/텍스트)으로 변환하여 발주서를 생성합니다. 수백 건의 주문도 버튼 하나면 발주 준비 끝입니다.</p>
+          <a href="step5.html" class="step-detail-link">자세히 보기 →</a>
         </div>
       </div>
 
