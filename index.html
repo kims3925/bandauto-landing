@@ -877,15 +877,30 @@ function handleSubmit(e) {
     email: fd.get('email'),
   };
 
-  /* 실제 연동 시 여기에 fetch API 호출 */
-  console.log('Trial form submitted:', data);
+  /* 제출 버튼 비활성화 (중복 방지) */
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = '제출 중...';
 
-  /* 팝업 닫기 + Toast */
-  closeTrialPopup();
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4000);
-  form.reset();
+  /* Google Sheets 저장 */
+  fetch('https://script.google.com/macros/s/AKfycbwUN0r6d4JXbioWNWw5f_irFpBv9er1cGmLKiDASGXYJqKHAWQt-s9oPYMjH4NqW4hy/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(() => {
+    closeTrialPopup();
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+    form.reset();
+  }).catch(err => {
+    console.error('Submit error:', err);
+    alert('신청서 제출 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+  }).finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = '무료체험신청서제출 →';
+  });
   return false;
 }
 
