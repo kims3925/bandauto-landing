@@ -134,6 +134,45 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
 }
 .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
+/* ── Hero Sample Band ── */
+.hero-sample {
+  margin-top: 32px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.hero-sample-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 14px;
+}
+.hero-sample-link {
+  display: inline-block;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.hero-sample-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+.hero-sample-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.hero-sample-desc {
+  margin-top: 12px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.5;
+}
+.hero-sample-desc strong {
+  color: var(--accent-light);
+}
+
 /* ── Value Cards ── */
 .values { background: var(--bg); }
 .values-grid {
@@ -473,6 +512,15 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
     <div class="hero-badge"><span class="dot"></span> 밴드 판매 자동화 플랫폼</div>
     <h1>도매 소싱부터 AI 가격 책정,<br>자동 판매까지 <span class="highlight">한 번에</span></h1>
     <p class="hero-sub">밴드 운영의 반복 업무를 5단계 자동화로 해결합니다.<br>사장님은 전략과 고객에만 집중하세요.</p>
+    <!-- 운영 중인 밴드 샘플 -->
+    <div class="hero-sample">
+      <p class="hero-sample-title">현재 운영되고 있는 밴드와 쇼핑몰 보기</p>
+      <a href="https://band.us/@withfamily" target="_blank" rel="noopener" class="hero-sample-link">
+        <img src="./images/가족함께수산.jpg" alt="가족함께수산 밴드" class="hero-sample-img">
+      </a>
+      <p class="hero-sample-desc"><strong>'가족함께수산'</strong> 밴드에서 게시글과 쇼핑몰 연결을 직접 확인해 보실 수 있습니다</p>
+    </div>
+
     <div class="hero-cta">
       <button class="btn btn-primary btn-lg" onclick="openTrialPopup()">🚀 무료체험신청서제출</button>
       <a href="features.html" class="btn btn-outline btn-lg">핵심 기능 보기</a>
