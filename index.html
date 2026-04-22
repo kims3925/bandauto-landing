@@ -111,6 +111,7 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .nav-mobile-btn { display: block; }
+  .nav-cta { display: none; }
 }
 
 /* ── Hero ── */
@@ -558,9 +559,9 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
     <!-- 운영 중인 밴드 샘플 -->
     <div class="hero-sample">
       <div class="hero-sample-info">
-        <p class="hero-sample-title">현재 밴드오토로 운영되고<br>있는 네이버 밴드보기</p>
+        <p class="hero-sample-title">현재 밴드오토로 운영되고 있는<br>네이버 밴드보기</p>
         <p class="hero-sample-url"><a href="https://band.us/@withfamily" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">band.us/@withfamily</a></p>
-        <p class="hero-sample-desc"><strong>'가족함께수산'</strong> 밴드에서<br>게시글과 쇼핑몰 연결 상황을<br>직접확인해 볼 수 있습니다</p>
+        <p class="hero-sample-desc"><strong>'가족함께수산'</strong> 밴드에서 게시글과<br>쇼핑몰 연결 상황을 직접확인해 볼 수 있습니다</p>
       </div>
       <a href="https://band.us/@withfamily" target="_blank" rel="noopener" class="hero-sample-link">
         <img src="./images/가족함께수산.jpg" alt="가족함께수산 밴드" class="hero-sample-img">
@@ -986,7 +987,7 @@ function handleSubmit(e) {
     closeTrialPopup();
     const toast = document.getElementById('toast');
     toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 4000);
+    setTimeout(() => toast.classList.remove('show'), 2500);
     form.reset();
   }).catch(err => {
     console.error('Submit error:', err);
