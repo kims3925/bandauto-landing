@@ -141,11 +141,11 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
   display: inline-flex;
   align-items: center;
   gap: 24px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(8px);
+  background: #fff;
   border-radius: 16px;
   padding: 20px 28px;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 .hero-sample-info {
   text-align: left;
@@ -153,13 +153,13 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
 .hero-sample-title {
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   line-height: 1.5;
   margin-bottom: 6px;
 }
 .hero-sample-url {
   font-size: 13px;
-  color: var(--accent-light);
+  color: var(--primary);
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -183,11 +183,11 @@ h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.4; }
 }
 .hero-sample-desc {
   font-size: 13px;
-  color: rgba(255,255,255,0.7);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 .hero-sample-desc strong {
-  color: var(--accent-light);
+  color: var(--primary);
 }
 @media (max-width: 520px) {
   .hero-sample { flex-direction: column; gap: 14px; padding: 16px 20px; }
