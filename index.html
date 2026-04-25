@@ -19,7 +19,7 @@
   <meta name="twitter:title" content="SNS AUTO – 자동으로 돈 벌게 하세요" />
   <meta name="twitter:description" content="소싱 → 등록 → 판매 → 광고 → 발주까지 완전 자동화" />
   <meta name="twitter:image" content="https://sns.hublink.im/images/sns_og.png" />
-  <meta name="theme-color" content="#bdddfe" />
+  <meta name="theme-color" content="#FDF8F0" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,15 +43,15 @@
   --accent:         #F59E0B;
   --success:        #10B981;
 
-  --bg-dark:        #bdddfe;
-  --bg-section:     #d0e7fe;
+  --bg-dark:        #FDF8F0;
+  --bg-section:     #F5EFE6;
   --bg-card:        rgba(255,255,255,0.85);
 
   --text-white: #1E293B;
   --text-muted: #475569;
   --text-sub:   #64748B;
 
-  --gradient-hero:  linear-gradient(135deg, #bdddfe 0%, #d0e7fe 50%, #e0f0ff 100%);
+  --gradient-hero:  linear-gradient(135deg, #FDF8F0 0%, #F5EFE6 50%, #FFF9F2 100%);
   --gradient-cta:   linear-gradient(135deg, #1E6FBF, #3AB8C8);
   --gradient-card:  linear-gradient(135deg, rgba(30,111,191,0.08), rgba(58,184,200,0.06));
 
@@ -79,7 +79,7 @@ html {
 
 body {
   font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #bdddfe;
+  background: #FDF8F0;
   color: var(--text-white);
   line-height: 1.6;
   overflow-x: hidden;
@@ -187,7 +187,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   left: 0;
   right: 0;
   height: 60px;
-  background: linear-gradient(to bottom, transparent, #bdddfe);
+  background: linear-gradient(to bottom, transparent, #FDF8F0);
   pointer-events: none;
 }
 
@@ -401,10 +401,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
 }
 
-.section-dark    { background: #bdddfe; }
-.section-medium  { background: #d0e7fe; }
-.section-cobalt  { background: #d0e7fe; }
-.section-cobalt2 { background: #c4dffd; }
+.section-dark    { background: #FDF8F0; }
+.section-medium  { background: #F5EFE6; }
+.section-cobalt  { background: #F5EFE6; }
+.section-cobalt2 { background: #EDE6DA; }
 
 .container {
   max-width: 1100px;
@@ -660,6 +660,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================= */
 .freedom-section { text-align: center; position: relative; padding-top: 40px; }
 .freedom-title { font-size: clamp(20px, 4vw, 32px) !important; }
+.freedom-tight { padding-top: 0 !important; padding-bottom: 40px !important; margin-top: -60px; }
 
 .freedom-image {
   margin: 48px auto 0;
@@ -1045,7 +1046,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
   overflow: hidden;
   padding: 80px 24px;
-  background: #c4dffd;
+  background: #EDE6DA;
 }
 
 .apply-card {
@@ -1354,7 +1355,7 @@ footer {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 80px;
-  background: linear-gradient(to bottom, transparent, #bdddfe);
+  background: linear-gradient(to bottom, transparent, #FDF8F0);
 }
 
 .breadcrumb {
@@ -1536,8 +1537,8 @@ footer {
     </p>
 
 
-    <!-- Scroll Down Arrow → 비포/애프터 섹션으로 -->
-    <div class="scroll-arrow" data-scroll-to="#before-after" aria-label="다음 섹션으로">
+    <!-- Scroll Down Arrow → 편안함 섹션으로 -->
+    <div class="scroll-arrow" data-scroll-to="#freedom" aria-label="다음 섹션으로">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <polyline points="6 9 12 15 18 9" />
       </svg>
@@ -1546,9 +1547,56 @@ footer {
 
 
   <!-- ══════════════════════════════════════════
-       SECTION 2: BEFORE / AFTER
+       SECTION 2: AUTOMATION = FREEDOM
+       "편안함을 넘어 이제는 시간의 자유를 얻으세요"
+  ══════════════════════════════════════════ -->
+  <section id="freedom" class="section section-cobalt freedom-section freedom-tight" aria-label="자동화로 얻는 자유">
+    <div class="container">
+      <div class="section-tag">🕊️ 편안함 그 너머</div>
+      <h2 class="section-title freedom-title reveal">
+        편안함을 넘어<br />
+        이제는 <span class="accent">시간의 자유</span>를 얻으세요
+      </h2>
+      <p class="section-desc centered reveal">
+        SNS AUTO는 단순한 자동화 도구가 아닙니다.<br />
+        당신의 삶을 되찾아드리는 <strong>수익 시스템</strong>입니다.
+      </p>
+
+      <!-- Image 3: Automation = Freedom -->
+      <div class="freedom-image reveal">
+        <img
+          src="images/automation-freedom.png"
+          alt="SNS AUTO 자동화로 여유를 즐기는 생활 - AI가 쇼핑몰을 대신 운영하는 개념 이미지"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Emotional Tags -->
+      <div class="freedom-tags reveal">
+        <span class="freedom-tag">😌 편안!</span>
+        <span class="freedom-tag">🕊️ 자유!</span>
+        <span class="freedom-tag">💰 자동수익!</span>
+        <span class="freedom-tag">🤖 AI 운영</span>
+        <span class="freedom-tag">📱 모바일 관리</span>
+        <span class="freedom-tag">⏰ 하루 30분</span>
+      </div>
+
+      <!-- Down Arrow → Before/After -->
+      <div class="section-down-arrow">
+        <button class="down-arrow-btn" data-scroll-to="#before-after" aria-label="비포/애프터 섹션으로">
+          <span>얼마나 달라질까요?</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3: BEFORE / AFTER
        "하루 6~8시간을 30분으로 줄이는 법"
-       이미지 4: Before-After 비교 비주얼
   ══════════════════════════════════════════ -->
   <section id="before-after" class="section section-dark flow-section" aria-label="비포/애프터 비교">
     <div class="container">
@@ -1593,54 +1641,6 @@ footer {
             <li><span class="icon">✅</span> 주문·발주 완전 자동 처리</li>
           </ul>
         </div>
-      </div>
-
-      <!-- Down Arrow → Reviews -->
-      <div class="section-down-arrow">
-        <button class="down-arrow-btn" data-scroll-to="#freedom" aria-label="자유 섹션으로">
-          <span>편안함 그 너머로</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════
-       SECTION 3: AUTOMATION = FREEDOM
-       "편안함을 넘어 이제는 시간의 자유를 얻으세요"
-  ══════════════════════════════════════════ -->
-  <section id="freedom" class="section section-cobalt freedom-section" aria-label="자동화로 얻는 자유">
-    <div class="container">
-      <div class="section-tag">🕊️ 편안함 그 너머</div>
-      <h2 class="section-title freedom-title reveal">
-        편안함을 넘어<br />
-        이제는 <span class="accent">시간의 자유</span>를 얻으세요
-      </h2>
-      <p class="section-desc centered reveal">
-        SNS AUTO는 단순한 자동화 도구가 아닙니다.<br />
-        당신의 삶을 되찾아드리는 <strong>수익 시스템</strong>입니다.
-      </p>
-
-      <!-- Image 3: Automation = Freedom -->
-      <div class="freedom-image reveal">
-        <img
-          src="images/automation-freedom.png"
-          alt="SNS AUTO 자동화로 여유를 즐기는 생활 - AI가 쇼핑몰을 대신 운영하는 개념 이미지"
-          loading="lazy"
-        />
-      </div>
-
-      <!-- Emotional Tags -->
-      <div class="freedom-tags reveal">
-        <span class="freedom-tag">😌 편안!</span>
-        <span class="freedom-tag">🕊️ 자유!</span>
-        <span class="freedom-tag">💰 자동수익!</span>
-        <span class="freedom-tag">🤖 AI 운영</span>
-        <span class="freedom-tag">📱 모바일 관리</span>
-        <span class="freedom-tag">⏰ 하루 30분</span>
       </div>
 
       <!-- Down Arrow → Reviews -->
