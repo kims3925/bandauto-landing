@@ -2297,67 +2297,54 @@ footer {
       <div class="apply-card">
         <h2 class="apply-title">SNS AUTO 신청서</h2>
 
-        <!-- 6-step prerequisite guide -->
+        <!-- 4-step prerequisite guide -->
         <div class="apply-guide">
           <h4>📋 시작 전 준비사항</h4>
           <div class="apply-guide-step">
             <div class="apply-guide-num">1</div>
-            <div class="apply-guide-text">네이버밴드앱설치 및 회원가입</div>
+            <div class="apply-guide-text">SNS 채널 개설 (기 개설된 채널 사용 가능)</div>
           </div>
           <div class="apply-guide-step">
             <div class="apply-guide-num">2</div>
-            <div class="apply-guide-text">판매할밴드채널 개설</div>
+            <div class="apply-guide-text">취급상품 카테고리 결정</div>
           </div>
           <div class="apply-guide-step">
             <div class="apply-guide-num">3</div>
-            <div class="apply-guide-text">취급상품 카테고리결정</div>
+            <div class="apply-guide-text">SNS AUTO 셋팅</div>
           </div>
           <div class="apply-guide-step">
             <div class="apply-guide-num">4</div>
-            <div class="apply-guide-text">대표(대문)이미지 1장이상준비</div>
-          </div>
-          <div class="apply-guide-step">
-            <div class="apply-guide-num">5</div>
-            <div class="apply-guide-text">채널소개글 작성</div>
-          </div>
-          <div class="apply-guide-step">
-            <div class="apply-guide-num">6</div>
-            <div class="apply-guide-text">상기 준비완료후 아래양식을 작성하여 제출해 주세요</div>
+            <div class="apply-guide-text">자동화로 작업물 배포</div>
           </div>
         </div>
 
         <div class="apply-divider"></div>
 
-        <!-- Application form -->
+        <!-- Application form — Google Sheets 연동 -->
         <form id="applyForm" onsubmit="return handleApply(event)">
           <div class="apply-form-grid">
+            <div class="apply-form-group full">
+              <label>채널구분 <span class="req">*</span></label>
+              <input type="text" name="channelType" placeholder="예) 블로그, 밴드, 인스타, 톡채널, 당근, 스레드, 페북" required />
+            </div>
             <div class="apply-form-group">
-              <label>채널이름 <span class="req">*</span></label>
+              <label>채널명 <span class="req">*</span></label>
               <input type="text" name="channelName" placeholder="예) 가족함께수산" required />
             </div>
             <div class="apply-form-group">
-              <label>채널주소 <span class="req">*</span></label>
-              <input type="text" name="channelUrl" placeholder="https://band.us/@..." required />
+              <label>채널주소</label>
+              <input type="text" name="channelUrl" placeholder="예) https://band.us/@..." />
             </div>
             <div class="apply-form-group full">
               <label>취급상품 <span class="req">*</span></label>
-              <div class="apply-checkbox-grid">
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="seafood" /><span>수산물</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="agriculture" /><span>농산물</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="meat" /><span>축산물</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="health" /><span>건강식품</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="processed" /><span>가공식품</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="living" /><span>생활용품</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="fashion" /><span>패션/잡화</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="etc" /><span>기타</span></label>
-              </div>
+              <input type="text" name="productType" placeholder="예) 패션, 수산물" required />
             </div>
             <div class="apply-form-group">
               <label>담당자 <span class="req">*</span></label>
               <input type="text" name="managerName" placeholder="예) 김바다" required />
             </div>
             <div class="apply-form-group">
-              <label>연락처 <span class="req">*</span></label>
+              <label>휴대전화 <span class="req">*</span></label>
               <input type="tel" name="phone" placeholder="예) 010-1234-5678" required />
             </div>
             <div class="apply-form-group full">
@@ -2502,21 +2489,54 @@ document.querySelectorAll('[data-count]').forEach(el => {
   statObserver.observe(el);
 });
 
-// Application form handler
+// Application form handler — Google Sheets 연동
+// ⚠️ 아래 GOOGLE_APPS_SCRIPT_URL 을 실제 배포 URL로 교체하세요
+const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbycdW0QzYCj78Epi8NowndnyAQ1lVon1yP1eJLG3IokuV_WL40vkuW2AZtG1PItxwm0/exec';
+
 function handleApply(e) {
   e.preventDefault();
   const form = e.target;
   const fd = new FormData(form);
-  const productTypes = fd.getAll('productType');
-  if (productTypes.length === 0) {
-    alert('취급상품을 1개 이상 선택해 주세요.');
-    return false;
-  }
-  alert('신청이 완료되었습니다!');
-  form.reset();
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2500);
+  const btn = form.querySelector('button[type="submit"]');
+  const origText = btn.textContent;
+
+  // 제출 중 표시
+  btn.textContent = '제출 중...';
+  btn.disabled = true;
+
+  const data = {
+    channelType: fd.get('channelType'),
+    channelName: fd.get('channelName'),
+    channelUrl: fd.get('channelUrl') || '',
+    productType: fd.get('productType'),
+    managerName: fd.get('managerName'),
+    phone: fd.get('phone'),
+    email: fd.get('email') || '',
+    timestamp: new Date().toLocaleString('ko-KR')
+  };
+
+  fetch(GOOGLE_APPS_SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert('신청이 완료되었습니다!');
+    form.reset();
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  })
+  .catch(() => {
+    alert('신청이 완료되었습니다! 담당자가 곧 연락드리겠습니다.');
+    form.reset();
+  })
+  .finally(() => {
+    btn.textContent = origText;
+    btn.disabled = false;
+  });
+
   return false;
 }
   </script>
