@@ -3,23 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SNS AUTO – 당신의 샵과 삶이 자동으로 자유해 집니다</title>
+  <title>SNS AUTO – 여러분의 샵이 자동으로 자유합니다</title>
   <meta name="description" content="소싱 → 등록 → 판매 → 광고 → 발주까지. SNS AUTO 하나로 완전 자동화. 이제 노동형 쇼핑몰에서 시스템형 수익으로." />
-  <link rel="canonical" href="https://sns.hublink.im/" />
   <meta property="og:title" content="SNS AUTO – 자동으로 돈 벌게 하세요" />
   <meta property="og:description" content="채널만 있으면 나머지는 SNS AUTO가 합니다" />
-  <meta property="og:url" content="https://sns.hublink.im/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="SNS AUTO" />
-  <meta property="og:locale" content="ko_KR" />
-  <meta property="og:image" content="https://sns.hublink.im/images/sns_og.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SNS AUTO – 자동으로 돈 벌게 하세요" />
-  <meta name="twitter:description" content="소싱 → 등록 → 판매 → 광고 → 발주까지 완전 자동화" />
-  <meta name="twitter:image" content="https://sns.hublink.im/images/sns_og.png" />
-  <meta name="theme-color" content="#bdddfe" />
+  <meta name="theme-color" content="#1E3A5F" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,10 +19,10 @@
 
   <style>
 /* =============================================
-   SNS AUTO - Global Styles (Light Blue Theme)
+   SNS AUTO - Global Styles (Cobalt Theme)
    ============================================= */
 
-/* CSS Variables — Light Blue theme */
+/* CSS Variables — 코발트 테마 */
 :root {
   --primary:        #1E6FBF;
   --primary-light:  #5BA4E6;
@@ -43,21 +31,21 @@
   --accent:         #F59E0B;
   --success:        #10B981;
 
-  --bg-dark:        #bdddfe;
-  --bg-section:     #d0e7fe;
-  --bg-card:        rgba(255,255,255,0.85);
+  --bg-dark:        #0D1B2E;
+  --bg-section:     #112240;
+  --bg-card:        rgba(255,255,255,0.07);
 
-  --text-white: #1E293B;
-  --text-muted: #475569;
-  --text-sub:   #64748B;
+  --text-white: #FFFFFF;
+  --text-muted: rgba(255,255,255,0.65);
+  --text-sub:   rgba(255,255,255,0.45);
 
-  --gradient-hero:  linear-gradient(135deg, #bdddfe 0%, #d0e7fe 50%, #e0f0ff 100%);
+  --gradient-hero:  linear-gradient(135deg, #0D1B2E 0%, #112240 50%, #173560 100%);
   --gradient-cta:   linear-gradient(135deg, #1E6FBF, #3AB8C8);
-  --gradient-card:  linear-gradient(135deg, rgba(30,111,191,0.08), rgba(58,184,200,0.06));
+  --gradient-card:  linear-gradient(135deg, rgba(30,111,191,0.18), rgba(58,184,200,0.12));
 
-  --border:         rgba(0,0,0,0.10);
-  --border-purple:  rgba(30,111,191,0.35);
-  --shadow-glow:    0 0 40px rgba(30,111,191,0.15);
+  --border:         rgba(255,255,255,0.10);
+  --border-purple:  rgba(30,111,191,0.45);
+  --shadow-glow:    0 0 40px rgba(30,111,191,0.30);
 
   --radius:    16px;
   --radius-sm: 10px;
@@ -79,7 +67,7 @@ html {
 
 body {
   font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #bdddfe;
+  background: #0D1B2E;
   color: var(--text-white);
   line-height: 1.6;
   overflow-x: hidden;
@@ -100,7 +88,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   right: 0;
   z-index: 1000;
   padding: 16px 24px;
-  background: rgba(255,255,255,0.88);
+  background: rgba(13,27,46,0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -145,12 +133,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 13px;
   font-weight: 700;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(30,111,191,0.35);
+  box-shadow: 0 4px 15px rgba(30,111,191,0.45);
 }
 
 .nav-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(30,111,191,0.50);
+  box-shadow: 0 8px 25px rgba(30,111,191,0.60);
 }
 
 /* =============================================
@@ -165,7 +153,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 24px 20px;
+  padding: 100px 24px 60px;
   text-align: center;
 }
 
@@ -176,7 +164,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(ellipse at center, rgba(30,111,191,0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse at center, rgba(30,111,191,0.18) 0%, transparent 60%);
   animation: pulse-bg 8s ease-in-out infinite;
 }
 
@@ -186,8 +174,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  background: linear-gradient(to bottom, transparent, #bdddfe);
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, #0D1B2E);
   pointer-events: none;
 }
 
@@ -200,13 +188,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(30,111,191,0.10);
-  border: 1px solid rgba(30,111,191,0.30);
+  background: rgba(30,111,191,0.18);
+  border: 1px solid rgba(30,111,191,0.45);
   padding: 8px 20px;
   border-radius: 50px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--primary-dark);
+  color: #5BA4E6;
   margin-bottom: 28px;
   position: relative;
   z-index: 1;
@@ -233,7 +221,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
-  color: #1E293B;
   animation: fadeInUp 0.8s ease 0.2s both;
 }
 
@@ -265,7 +252,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   animation: fadeInUp 0.8s ease 0.3s both;
 }
 
-.hero-subtitle strong { color: #1E293B; font-weight: 700; }
+.hero-subtitle strong { color: white; font-weight: 700; }
 
 .hero-buttons {
   display: flex;
@@ -289,7 +276,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 16px;
   font-weight: 800;
   transition: var(--transition);
-  box-shadow: 0 8px 30px rgba(30,111,191,0.40);
+  box-shadow: 0 8px 30px rgba(30,111,191,0.50);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -299,12 +286,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(30,111,191,0.55);
+  box-shadow: 0 16px 40px rgba(30,111,191,0.65);
 }
 
 .btn-secondary {
-  background: rgba(255,255,255,0.7);
-  color: #1E293B;
+  background: rgba(255,255,255,0.08);
+  color: white;
   padding: 16px 32px;
   border-radius: 50px;
   font-size: 15px;
@@ -319,7 +306,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.15);
   border-color: var(--primary-light);
   transform: translateY(-2px);
 }
@@ -327,8 +314,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* Hero Image */
 .hero-image-wrap {
   margin-top: 56px;
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   z-index: 1;
   max-width: 700px;
@@ -338,7 +323,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero-image-wrap img {
   border-radius: var(--radius-lg);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.15), var(--shadow-glow);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5), var(--shadow-glow);
   width: 100%;
 }
 
@@ -383,7 +368,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 40px;
   height: 40px;
   fill: none;
-  stroke: var(--primary);
+  stroke: #5BA4E6;
   stroke-width: 2.5;
   opacity: 0.8;
 }
@@ -401,10 +386,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
 }
 
-.section-dark    { background: #bdddfe; }
-.section-medium  { background: #d0e7fe; }
-.section-cobalt  { background: #d0e7fe; }
-.section-cobalt2 { background: #c4dffd; }
+.section-dark    { background: #0D1B2E; }
+.section-medium  { background: #112240; }
+.section-cobalt  { background: #112240; }
+.section-cobalt2 { background: #0F1E38; }
 
 .container {
   max-width: 1100px;
@@ -413,9 +398,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .section-tag {
   display: inline-block;
-  background: rgba(30,111,191,0.10);
-  border: 1px solid rgba(30,111,191,0.30);
-  color: var(--primary-dark);
+  background: rgba(30,111,191,0.14);
+  border: 1px solid rgba(30,111,191,0.4);
+  color: #5BA4E6;
   font-size: 12px;
   font-weight: 700;
   padding: 6px 16px;
@@ -430,7 +415,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 900;
   line-height: 1.25;
   margin-bottom: 16px;
-  color: #1E293B;
 }
 
 .section-title .accent,
@@ -460,7 +444,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   max-width: 800px;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
 }
 
 .flow-cards {
@@ -484,17 +468,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .flow-card-before {
-  background: rgba(239,68,68,0.06);
-  border: 1px solid rgba(239,68,68,0.20);
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.25);
 }
 
 .flow-card-after {
-  background: rgba(16,185,129,0.06);
-  border: 1px solid rgba(16,185,129,0.20);
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.25);
 }
 
 .flow-card-before h3 {
-  color: #DC2626;
+  color: #F87171;
   font-size: 16px;
   font-weight: 800;
   margin-bottom: 16px;
@@ -504,7 +488,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .flow-card-after h3 {
-  color: #059669;
+  color: #34D399;
   font-size: 16px;
   font-weight: 800;
   margin-bottom: 16px;
@@ -551,7 +535,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .feature-card {
-  background: rgba(255,255,255,0.85);
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px 24px;
@@ -560,8 +544,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  display: block;
-  color: inherit;
 }
 
 .feature-card::before {
@@ -576,8 +558,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .feature-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(30,111,191,0.4);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08), 0 0 30px rgba(30,111,191,0.10);
+  border-color: rgba(30,111,191,0.5);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25), 0 0 30px rgba(30,111,191,0.18);
 }
 
 .feature-card:hover::before { opacity: 1; }
@@ -587,13 +569,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .feature-step {
   font-size: 11px;
   font-weight: 700;
-  color: var(--primary);
+  color: #5BA4E6;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
-.feature-title { font-size: 18px; font-weight: 800; margin-bottom: 10px; line-height: 1.3; color: #1E293B; }
+.feature-title { font-size: 18px; font-weight: 800; margin-bottom: 10px; line-height: 1.3; }
 
 .feature-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; margin-bottom: 20px; }
 
@@ -603,11 +585,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 6px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--primary);
+  color: #5BA4E6;
   transition: var(--transition);
 }
 
-.feature-link:hover { gap: 10px; color: var(--primary-dark); }
+.feature-link:hover { gap: 10px; color: white; }
 
 .feature-link svg { width: 16px; height: 16px; transition: var(--transition); }
 
@@ -632,7 +614,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .analytics-image {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.10), 0 0 40px rgba(30,111,191,0.10);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35), 0 0 40px rgba(30,111,191,0.25);
 }
 
 .analytics-content .section-tag { margin-bottom: 12px; }
@@ -645,28 +627,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .metric-card {
-  background: rgba(255,255,255,0.85);
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 16px;
   text-align: center;
 }
 
-.metric-value { font-size: 24px; font-weight: 900; color: var(--primary); line-height: 1; }
+.metric-value { font-size: 24px; font-weight: 900; color: #5BA4E6; line-height: 1; }
 .metric-label { font-size: 11px; color: var(--text-sub); margin-top: 4px; }
 
 /* =============================================
    AUTOMATION FREEDOM SECTION
    ============================================= */
-.freedom-section { text-align: center; position: relative; padding-top: 40px; }
-.freedom-title { font-size: clamp(20px, 4vw, 32px) !important; }
+.freedom-section { text-align: center; position: relative; }
 
 .freedom-image {
   margin: 48px auto 0;
   max-width: 800px;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
 }
 
 .freedom-tags {
@@ -678,13 +659,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .freedom-tag {
-  background: rgba(255,255,255,0.85);
+  background: var(--bg-card);
   border: 1px solid var(--border);
   padding: 10px 20px;
   border-radius: 50px;
   font-size: 14px;
   font-weight: 700;
-  color: #1E293B;
+  color: white;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -692,8 +673,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .freedom-tag:hover {
-  background: rgba(255,255,255,1);
-  border-color: var(--primary-light);
+  background: rgba(30,111,191,0.22);
+  border-color: #5BA4E6;
 }
 
 /* =============================================
@@ -713,7 +694,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .logistics-image {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
 }
 
 .logistics-steps {
@@ -728,15 +709,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: flex-start;
   gap: 16px;
   padding: 16px;
-  background: rgba(255,255,255,0.85);
+  background: var(--bg-card);
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   transition: var(--transition);
 }
 
 .logistics-step:hover {
-  border-color: rgba(30,111,191,0.35);
-  background: rgba(255,255,255,1);
+  border-color: rgba(30,111,191,0.45);
+  background: rgba(30,111,191,0.10);
 }
 
 .step-num {
@@ -750,10 +731,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 14px;
   font-weight: 800;
   flex-shrink: 0;
-  color: white;
 }
 
-.step-content h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: #1E293B; }
+.step-content h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
 .step-content p { font-size: 13px; color: var(--text-muted); }
 
 /* =============================================
@@ -777,7 +757,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .review-card {
-  background: rgba(255,255,255,0.90);
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px 24px;
@@ -786,9 +766,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .review-card:hover {
-  border-color: rgba(30,111,191,0.35);
+  border-color: rgba(30,111,191,0.45);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .review-stars { display: flex; gap: 4px; margin-bottom: 16px; font-size: 18px; }
@@ -814,127 +793,47 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 18px;
   font-weight: 800;
   flex-shrink: 0;
-  color: white;
 }
 
-.review-name { font-size: 14px; font-weight: 700; color: #1E293B; }
+.review-name { font-size: 14px; font-weight: 700; }
 .review-role { font-size: 12px; color: var(--text-sub); }
 
-/* =============================================
-   BAND AUTO LINK SECTION
-   ============================================= */
-.band-auto-link-section {
-  margin-top: 48px;
-  margin-bottom: 20px;
-}
-
-.band-auto-link-card {
-  background: rgba(255,255,255,0.92);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 40px 36px;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-}
-
-.band-auto-link-card h3 {
-  font-size: 24px;
-  font-weight: 900;
-  color: #1E293B;
-  margin-bottom: 16px;
-}
-
-.band-auto-link-card p {
-  font-size: 15px;
-  color: var(--text-muted);
-  line-height: 1.75;
-  margin-bottom: 28px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.btn-band-auto-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--gradient-cta);
-  color: white;
-  padding: 16px 36px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: 800;
-  transition: var(--transition);
-  box-shadow: 0 8px 25px rgba(30,111,191,0.35);
-}
-
-.btn-band-auto-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(30,111,191,0.50);
-}
-
-/* Band Case - Card with side-by-side layout */
+/* Band Auto Real Case */
 .band-case {
   margin-top: 40px;
-  background: rgba(255,255,255,0.92);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 36px 32px;
+  background: linear-gradient(135deg, rgba(30,111,191,0.18), rgba(58,184,200,0.12));
+  border: 1px solid rgba(30,111,191,0.45);
+  border-radius: var(--radius);
+  padding: 32px 28px;
   text-align: left;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
 }
 
-.band-case-layout {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
-}
-
-.band-case-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.band-case-image-wrap {
-  flex-shrink: 0;
-  width: 260px;
-}
-
-.band-case-image-wrap img {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .band-case-layout {
-    flex-direction: column;
-  }
-  .band-case-image-wrap {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
+.band-case::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -30%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(30,111,191,0.2) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .band-case-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(30,111,191,0.10);
-  border: 1px solid rgba(30,111,191,0.30);
+  background: rgba(30,111,191,0.22);
+  border: 1px solid rgba(30,111,191,0.45);
   padding: 6px 14px;
   border-radius: 50px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--primary);
+  color: #5BA4E6;
   margin-bottom: 20px;
 }
 
-.band-case h3 { font-size: 22px; font-weight: 900; margin-bottom: 12px; color: #1E293B; }
+.band-case h3 { font-size: 22px; font-weight: 900; margin-bottom: 12px; }
 
 .band-case p {
   font-size: 14px;
@@ -948,7 +847,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .band-metric { text-align: center; }
 
-.band-metric-value { font-size: 28px; font-weight: 900; color: var(--primary); }
+.band-metric-value { font-size: 28px; font-weight: 900; color: #5BA4E6; }
 
 .band-metric-label { font-size: 12px; color: var(--text-sub); }
 
@@ -963,35 +862,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 15px;
   font-weight: 800;
   transition: var(--transition);
-  box-shadow: 0 8px 25px rgba(30,111,191,0.35);
+  box-shadow: 0 8px 25px rgba(30,111,191,0.40);
 }
 
 .btn-band:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(30,111,191,0.50);
-}
-
-/* Band case inner reviews */
-.band-case-reviews {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.band-case-review-item {
-  background: rgba(30,111,191,0.04);
-  border: 1px solid rgba(30,111,191,0.12);
-  border-radius: 12px;
-  padding: 18px;
-}
-
-.band-case-review-item p {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.7;
-  font-style: italic;
-  margin-bottom: 0;
+  box-shadow: 0 16px 40px rgba(30,111,191,0.55);
 }
 
 /* =============================================
@@ -1011,8 +887,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .target-card {
-  background: rgba(255,255,255,0.90);
-  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(30,111,191,0.18), rgba(58,184,200,0.12));
+  border: 1px solid rgba(30,111,191,0.4);
   border-radius: var(--radius-lg);
   padding: 36px 28px;
   text-align: left;
@@ -1021,7 +897,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: var(--transition);
 }
 
-.target-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+.target-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
 
 .target-icon { font-size: 48px; margin-bottom: 20px; display: block; }
 
@@ -1029,215 +905,102 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: var(--primary);
+  color: #5BA4E6;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-.target-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 14px; line-height: 1.3; color: #1E293B; }
+.target-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 14px; line-height: 1.3; }
 .target-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
 /* =============================================
-   APPLICATION FORM SECTION
+   FINAL CTA SECTION
    ============================================= */
-.apply-section {
+.final-cta {
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding: 80px 24px;
-  background: #c4dffd;
+  padding: 100px 24px;
+  background: linear-gradient(135deg, #112240, #173560, #0D1B2E);
 }
 
-.apply-card {
-  max-width: 720px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.95);
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(30,111,191,0.28) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-image {
+  max-width: 700px;
+  margin: 0 auto 60px;
   border-radius: var(--radius-lg);
-  padding: 48px 40px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-  text-align: left;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5), var(--shadow-glow);
+  position: relative;
+  z-index: 1;
 }
 
-.apply-title {
-  font-size: clamp(24px, 5vw, 36px);
+.final-cta-title {
+  font-size: clamp(28px, 6vw, 52px);
   font-weight: 900;
-  color: #1E293B;
-  text-align: center;
-  margin-bottom: 32px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
-.apply-guide {
-  margin-bottom: 32px;
-  padding: 24px;
-  background: rgba(30,111,191,0.04);
-  border: 1px solid rgba(30,111,191,0.15);
-  border-radius: var(--radius);
-}
-
-.apply-guide h4 {
+.final-cta-sub {
   font-size: 16px;
-  font-weight: 800;
-  color: var(--primary-dark);
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.apply-guide-step {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(30,111,191,0.08);
-}
-
-.apply-guide-step:last-child { border-bottom: none; }
-
-.apply-guide-num {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--gradient-cta);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 800;
-  color: white;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.apply-guide-text {
-  font-size: 14px;
   color: var(--text-muted);
-  line-height: 1.6;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
 }
 
-.apply-divider {
-  height: 1px;
-  background: var(--border);
-  margin: 8px 0 28px;
-}
-
-.apply-form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.apply-form-group {
+.final-cta-buttons {
   display: flex;
   flex-direction: column;
-}
-
-.apply-form-group.full {
-  grid-column: 1 / -1;
-}
-
-.apply-form-group label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #1E293B;
-  margin-bottom: 6px;
-}
-
-.apply-form-group label .req { color: #EF4444; margin-left: 2px; }
-
-.apply-form-group input {
-  padding: 12px 16px;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 8px;
-  font-size: 15px;
-  font-family: inherit;
-  color: #1E293B;
-  background: #FAFAFA;
-  transition: border-color 0.15s, box-shadow 0.15s;
-}
-
-.apply-form-group input:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(30,111,191,0.1);
-  background: #fff;
-}
-
-.apply-form-group input::placeholder { color: #94A3B8; }
-
-.apply-checkbox-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-
-.apply-checkbox-item {
-  display: flex;
+  gap: 14px;
   align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.15s;
-  background: #FAFAFA;
+  position: relative;
+  z-index: 1;
 }
 
-.apply-checkbox-item:hover {
-  border-color: var(--primary-light);
-  background: #F0F7FF;
+@media (min-width: 480px) {
+  .final-cta-buttons { flex-direction: row; justify-content: center; }
 }
 
-.apply-checkbox-item input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  accent-color: var(--primary);
-  cursor: pointer;
-}
-
-.apply-checkbox-item span { font-size: 13px; color: #1E293B; }
-
-.apply-submit {
-  margin-top: 28px;
-  text-align: center;
-}
-
-.apply-submit .btn-primary {
-  width: 100%;
-  justify-content: center;
-  padding: 18px;
+.btn-free {
+  background: var(--gradient-cta);
+  color: white;
+  padding: 18px 40px;
+  border-radius: 50px;
   font-size: 17px;
+  font-weight: 900;
+  transition: var(--transition);
+  box-shadow: 0 8px 30px rgba(30,111,191,0.50);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.apply-submit-note {
-  margin-top: 12px;
-  font-size: 13px;
-  color: #64748B;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .apply-card { padding: 32px 20px; }
-  .apply-form-grid { grid-template-columns: 1fr; }
-  .apply-checkbox-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 420px) {
-  .apply-checkbox-grid { grid-template-columns: 1fr 1fr; }
-}
-
-/* Features all link button */
-.features-all-link {
-  margin-top: 32px;
-  text-align: center;
+.btn-free:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 50px rgba(30,111,191,0.65);
 }
 
 /* =============================================
    FOOTER
    ============================================= */
 footer {
-  background: #1E293B;
+  background: #080F1C;
   padding: 48px 24px 32px;
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.08);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .footer-logo {
@@ -1250,7 +1013,7 @@ footer {
   margin-bottom: 12px;
 }
 
-.footer-slogan { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 28px; }
+.footer-slogan { font-size: 13px; color: var(--text-sub); margin-bottom: 28px; }
 
 .footer-links {
   display: flex;
@@ -1260,10 +1023,10 @@ footer {
   margin-bottom: 32px;
 }
 
-.footer-links a { font-size: 13px; color: rgba(255,255,255,0.65); transition: var(--transition); }
+.footer-links a { font-size: 13px; color: var(--text-muted); transition: var(--transition); }
 .footer-links a:hover { color: #5BA4E6; }
 
-.footer-copy { font-size: 12px; color: rgba(255,255,255,0.45); }
+.footer-copy { font-size: 12px; color: var(--text-sub); }
 
 /* =============================================
    SECTION DIVIDER ARROW
@@ -1287,7 +1050,7 @@ footer {
   border: none;
 }
 
-.down-arrow-btn:hover { color: var(--primary); }
+.down-arrow-btn:hover { color: #5BA4E6; }
 
 .down-arrow-btn svg {
   width: 32px;
@@ -1329,7 +1092,7 @@ footer {
    ============================================= */
 @media (max-width: 640px) {
   .section { padding: 60px 20px; }
-  .hero { padding: 90px 20px 10px; }
+  .hero { padding: 90px 20px 50px; }
   .hero-stats { gap: 24px; }
   .stat-num { font-size: 22px; }
   .band-case-metrics { gap: 16px; }
@@ -1354,7 +1117,7 @@ footer {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 80px;
-  background: linear-gradient(to bottom, transparent, #bdddfe);
+  background: linear-gradient(to bottom, transparent, #0D1B2E);
 }
 
 .breadcrumb {
@@ -1368,7 +1131,7 @@ footer {
 }
 
 .breadcrumb a { font-size: 13px; color: var(--text-muted); transition: var(--transition); }
-.breadcrumb a:hover { color: var(--primary); }
+.breadcrumb a:hover { color: #5BA4E6; }
 .breadcrumb span { font-size: 13px; color: var(--text-sub); }
 
 .detail-section { padding: 60px 24px; }
@@ -1391,7 +1154,7 @@ footer {
 .detail-image {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.10), var(--shadow-glow);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35), var(--shadow-glow);
 }
 
 .detail-list {
@@ -1415,8 +1178,8 @@ footer {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: rgba(30,111,191,0.10);
-  border: 1px solid rgba(30,111,191,0.30);
+  background: rgba(30,111,191,0.18);
+  border: 1px solid rgba(30,111,191,0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1426,21 +1189,21 @@ footer {
 }
 
 .info-box {
-  background: rgba(30,111,191,0.06);
-  border: 1px solid rgba(30,111,191,0.20);
+  background: linear-gradient(135deg, rgba(30,111,191,0.18), rgba(58,184,200,0.12));
+  border: 1px solid rgba(30,111,191,0.4);
   border-radius: var(--radius);
   padding: 24px;
   margin-top: 24px;
 }
 
-.info-box h4 { font-size: 15px; font-weight: 800; margin-bottom: 12px; color: var(--primary); }
+.info-box h4 { font-size: 15px; font-weight: 800; margin-bottom: 12px; color: #5BA4E6; }
 .info-box p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
 
 .back-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255,255,255,0.85);
+  background: var(--bg-card);
   border: 1px solid var(--border);
   padding: 12px 24px;
   border-radius: 50px;
@@ -1451,7 +1214,7 @@ footer {
   margin-bottom: 40px;
 }
 
-.back-btn:hover { border-color: var(--primary); color: #1E293B; transform: translateX(-4px); }
+.back-btn:hover { border-color: #5BA4E6; color: white; transform: translateX(-4px); }
 
 .next-section-nav {
   display: flex;
@@ -1465,7 +1228,7 @@ footer {
 .next-nav-btn {
   flex: 1;
   min-width: 140px;
-  background: rgba(255,255,255,0.85);
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 16px 20px;
@@ -1474,30 +1237,10 @@ footer {
   font-size: 13px;
 }
 
-.next-nav-btn:hover { border-color: var(--primary); background: rgba(255,255,255,1); }
+.next-nav-btn:hover { border-color: #5BA4E6; background: rgba(30,111,191,0.1); }
 .next-nav-btn .nav-icon { font-size: 24px; margin-bottom: 6px; }
-.next-nav-btn .nav-title { font-weight: 700; font-size: 13px; color: #1E293B; }
+.next-nav-btn .nav-title { font-weight: 700; font-size: 13px; }
 .next-nav-btn .nav-label { font-size: 11px; color: var(--text-sub); }
-
-/* =============================================
-   TOAST
-   ============================================= */
-.toast {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%) translateY(100px);
-  background: var(--success);
-  color: white;
-  padding: 16px 28px;
-  border-radius: var(--radius-sm);
-  font-size: 15px;
-  font-weight: 600;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.20);
-  transition: transform 0.3s ease;
-  z-index: 300;
-}
-.toast.show { transform: translateX(-50%) translateY(0); }
   </style>
 </head>
 <body>
@@ -1508,7 +1251,7 @@ footer {
       <div class="nav-logo-icon">S</div>
       <span class="nav-logo-text">SNS AUTO</span>
     </a>
-    <a href="#apply" class="nav-cta">무료체험 신청</a>
+    <a href="#contact" class="nav-cta">🚀 무료 상담 신청</a>
   </nav>
 
 
@@ -1523,10 +1266,10 @@ footer {
     </div>
 
     <h1 class="hero-title">
-      당신의 샵과 삶이<br />
+      여러분의 샵이<br />
       <span class="highlight">"자동으로"</span>
       <span class="emoji-free">🕊️</span><br />
-      <span class="highlight">자유</span>해 집니다
+      <span class="highlight">자유</span>합니다
     </h1>
 
     <p class="hero-subtitle">
@@ -1535,9 +1278,42 @@ footer {
       이제 일하는 쇼핑몰이 아니라, <strong>돈 벌어주는 시스템</strong>을 만드세요.
     </p>
 
+    <div class="hero-buttons">
+      <a href="#features" class="btn-primary">✨ 자동화 시작하기</a>
+      <a href="#band-case" class="btn-secondary">📌 실제 사례 보기</a>
+    </div>
 
-    <!-- Scroll Down Arrow → 비포/애프터 섹션으로 -->
-    <div class="scroll-arrow" data-scroll-to="#before-after" aria-label="다음 섹션으로">
+    <!-- Image 1: SNS 자동 업로드 허브 -->
+    <div class="hero-image-wrap reveal">
+      <img
+        src="images/hero-sns-upload.png"
+        alt="SNS AUTO - 인스타그램, 카카오톡, 블로그, 페이스북 등 멀티채널 자동 업로드 대시보드"
+        loading="eager"
+      />
+    </div>
+
+    <!-- Key Stats -->
+    <div class="hero-stats reveal">
+      <div class="stat-item">
+        <div class="stat-num"><span data-count="5">0</span>개</div>
+        <div class="stat-label">완전 자동화 단계</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span data-count="90">0</span>%</div>
+        <div class="stat-label">업무 시간 절감</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span data-count="30">0</span>분</div>
+        <div class="stat-label">일평균 운영 시간</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span data-count="560">0</span>%</div>
+        <div class="stat-label">평균 ROAS</div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Arrow → 자유 섹션으로 -->
+    <div class="scroll-arrow" data-scroll-to="#freedom" aria-label="다음 섹션으로">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <polyline points="6 9 12 15 18 9" />
       </svg>
@@ -1546,7 +1322,56 @@ footer {
 
 
   <!-- ══════════════════════════════════════════
-       SECTION 2: BEFORE / AFTER
+       SECTION 2: AUTOMATION = FREEDOM
+       "편안함을 넘어 이제는 시간의 자유를 얻으세요"
+       이미지 3: 자동화 = 자유 감성 이미지
+  ══════════════════════════════════════════ -->
+  <section id="freedom" class="section section-cobalt freedom-section" aria-label="자동화로 얻는 자유">
+    <div class="container">
+      <div class="section-tag">🕊️ 편안함 그 너머</div>
+      <h2 class="section-title reveal">
+        편안함을 넘어<br />
+        이제는 <span class="accent">시간의 자유</span>를 얻으세요
+      </h2>
+      <p class="section-desc centered reveal">
+        SNS AUTO는 단순한 자동화 도구가 아닙니다.<br />
+        당신의 삶을 되찾아드리는 <strong>수익 시스템</strong>입니다.
+      </p>
+
+      <!-- Image 3: Automation = Freedom -->
+      <div class="freedom-image reveal">
+        <img
+          src="images/automation-freedom.png"
+          alt="SNS AUTO 자동화로 여유를 즐기는 생활 - AI가 쇼핑몰을 대신 운영하는 개념 이미지"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Emotional Tags -->
+      <div class="freedom-tags reveal">
+        <span class="freedom-tag">😌 편안!</span>
+        <span class="freedom-tag">🕊️ 자유!</span>
+        <span class="freedom-tag">💰 자동수익!</span>
+        <span class="freedom-tag">🤖 AI 운영</span>
+        <span class="freedom-tag">📱 모바일 관리</span>
+        <span class="freedom-tag">⏰ 하루 30분</span>
+      </div>
+
+      <!-- Down Arrow → Before/After -->
+      <div class="section-down-arrow">
+        <button class="down-arrow-btn" data-scroll-to="#before-after" aria-label="비포/애프터 섹션으로">
+          <span>얼마나 달라질까요?</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3: BEFORE / AFTER
        "하루 6~8시간을 30분으로 줄이는 법"
        이미지 4: Before-After 비교 비주얼
   ══════════════════════════════════════════ -->
@@ -1593,54 +1418,6 @@ footer {
             <li><span class="icon">✅</span> 주문·발주 완전 자동 처리</li>
           </ul>
         </div>
-      </div>
-
-      <!-- Down Arrow → Reviews -->
-      <div class="section-down-arrow">
-        <button class="down-arrow-btn" data-scroll-to="#freedom" aria-label="자유 섹션으로">
-          <span>편안함 그 너머로</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════
-       SECTION 3: AUTOMATION = FREEDOM
-       "편안함을 넘어 이제는 시간의 자유를 얻으세요"
-  ══════════════════════════════════════════ -->
-  <section id="freedom" class="section section-cobalt freedom-section" aria-label="자동화로 얻는 자유">
-    <div class="container">
-      <div class="section-tag">🕊️ 편안함 그 너머</div>
-      <h2 class="section-title freedom-title reveal">
-        편안함을 넘어<br />
-        이제는 <span class="accent">시간의 자유</span>를 얻으세요
-      </h2>
-      <p class="section-desc centered reveal">
-        SNS AUTO는 단순한 자동화 도구가 아닙니다.<br />
-        당신의 삶을 되찾아드리는 <strong>수익 시스템</strong>입니다.
-      </p>
-
-      <!-- Image 3: Automation = Freedom -->
-      <div class="freedom-image reveal">
-        <img
-          src="images/automation-freedom.png"
-          alt="SNS AUTO 자동화로 여유를 즐기는 생활 - AI가 쇼핑몰을 대신 운영하는 개념 이미지"
-          loading="lazy"
-        />
-      </div>
-
-      <!-- Emotional Tags -->
-      <div class="freedom-tags reveal">
-        <span class="freedom-tag">😌 편안!</span>
-        <span class="freedom-tag">🕊️ 자유!</span>
-        <span class="freedom-tag">💰 자동수익!</span>
-        <span class="freedom-tag">🤖 AI 운영</span>
-        <span class="freedom-tag">📱 모바일 관리</span>
-        <span class="freedom-tag">⏰ 하루 30분</span>
       </div>
 
       <!-- Down Arrow → Reviews -->
@@ -1767,81 +1544,60 @@ footer {
 
       </div><!-- /reviews-grid -->
 
-      <!-- ── 밴드자동화보기 NEW SECTION ── -->
-      <div class="band-auto-link-section reveal">
-        <div class="band-auto-link-card">
-          <h3>밴드자동화보기</h3>
-          <p>
-            도매 소싱부터 AI 가격 책정, 자동 판매까지 한 번에<br />
-            밴드 운영의 반복업무를 자동화로 해결합니다<br />
-            사장님은 전략과 고객에만 집중하세요.
-          </p>
-          <a href="https://band.hublink.im/" target="_blank" rel="noopener noreferrer" class="btn-band-auto-link">
-            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-            밴드자동화 보러가기 →
-          </a>
-        </div>
-      </div>
-
-      <!-- ── 실제 운영 사례: 가족함께수산 (Card layout: text left, image right) ── -->
+      <!-- ── 실제 운영 사례: 가족함께수산 ── -->
       <div id="band-case" class="band-case reveal">
-        <div class="band-case-layout">
-          <div class="band-case-content">
-            <div class="band-case-badge">
-              📌 밴드오토(Band Auto) 실제 운영 사례
-            </div>
-            <h3>🐟 가족함께수산 – 밴드 채널</h3>
-            <p>
-              <strong>밴드오토(Band Auto)</strong>를 통해 실제 운영 중인 밴드 채널입니다.
-              싱싱한 산지 횟감·생물, 제철 농산물, 신선 축산물을 밴드 채널에서
-              SNS AUTO 자동화 시스템으로 판매·운영 중입니다.
-            </p>
-
-            <div class="band-case-metrics">
-              <div class="band-metric">
-                <div class="band-metric-value">밴드오토</div>
-                <div class="band-metric-label">운영 플랫폼</div>
-              </div>
-              <div class="band-metric">
-                <div class="band-metric-value">실운영중</div>
-                <div class="band-metric-label">현재 상태</div>
-              </div>
-              <div class="band-metric">
-                <div class="band-metric-value">수산·농축산</div>
-                <div class="band-metric-label">취급 카테고리</div>
-              </div>
-            </div>
-
-            <a
-              href="https://band.us/@withfamily"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-band"
-              aria-label="가족함께수산 밴드 채널 방문 (새 탭에서 열림)"
-            >
-              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-              가족함께수산 밴드 채널 방문하기
-            </a>
-          </div>
-
-          <div class="band-case-image-wrap">
-            <img src="images/가족함께수산.jpg" alt="가족함께수산 밴드 채널" loading="lazy" />
-          </div>
+        <div class="band-case-badge">
+          📌 밴드오토(Band Auto) 실제 운영 사례
         </div>
+        <h3>🐟 가족함께수산 – 밴드 채널</h3>
+        <p>
+          <strong>밴드오토(Band Auto)</strong>를 통해 실제 운영 중인 밴드 채널입니다.
+          싱싱한 산지 횟감·생물, 제철 농산물, 신선 축산물을 밴드 채널에서
+          SNS AUTO 자동화 시스템으로 판매·운영 중입니다.<br /><br />
+          홍게·꽃게·대게 등 제철 수산물을 소싱부터 상세페이지 제작,
+          밴드 업로드, 주문 처리까지 자동으로 운영하는 생생한 사례를
+          직접 확인해보세요.
+        </p>
 
         <!-- 밴드 내 후기 2개 (신뢰형 안내) -->
-        <div class="band-case-reviews" style="margin-top:24px;">
-          <div class="band-case-review-item">
-            <p>
+        <div style="display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:28px;">
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px;">
+            <div style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.7;font-style:italic;">
               "수율 좋고 신선해요! 다음에도 또 주문할게요 😊" — 구매 고객 후기 (밴드 내 실제 게시 중)
-            </p>
+            </div>
           </div>
-          <div class="band-case-review-item">
-            <p>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px;">
+            <div style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.7;font-style:italic;">
               "홍게 크기도 속도 꽉 차고, 배송도 빠릅니다. 강추!" — 구매 고객 후기 (밴드 내 실제 게시 중)
-            </p>
+            </div>
           </div>
         </div>
+
+        <div class="band-case-metrics">
+          <div class="band-metric">
+            <div class="band-metric-value">밴드오토</div>
+            <div class="band-metric-label">운영 플랫폼</div>
+          </div>
+          <div class="band-metric">
+            <div class="band-metric-value">실운영중</div>
+            <div class="band-metric-label">현재 상태</div>
+          </div>
+          <div class="band-metric">
+            <div class="band-metric-value">수산·농축산</div>
+            <div class="band-metric-label">취급 카테고리</div>
+          </div>
+        </div>
+
+        <a
+          href="https://band.us/@withfamily"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-band"
+          aria-label="가족함께수산 밴드 채널 방문 (새 탭에서 열림)"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          가족함께수산 밴드 채널 방문하기
+        </a>
       </div>
 
       <!-- Down Arrow → Features -->
@@ -1874,7 +1630,7 @@ footer {
 
       <div class="features-grid">
         <!-- 1. 소싱 -->
-        <a href="step1.html" class="feature-card reveal" aria-label="인기상품 자동 소싱">
+        <article class="feature-card reveal" aria-label="인기상품 자동 소싱">
           <div class="feature-icon">🛒</div>
           <div class="feature-step">STEP 01 · 소싱</div>
           <h3 class="feature-title">인기상품 자동 소싱</h3>
@@ -1888,10 +1644,10 @@ footer {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </span>
-        </a>
+        </article>
 
         <!-- 2. 등록 -->
-        <a href="step2.html" class="feature-card reveal" aria-label="상세페이지 자동 생성">
+        <article class="feature-card reveal" aria-label="상세페이지 자동 생성">
           <div class="feature-icon">📄</div>
           <div class="feature-step">STEP 02 · 등록</div>
           <h3 class="feature-title">상세페이지 자동 생성</h3>
@@ -1905,10 +1661,10 @@ footer {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </span>
-        </a>
+        </article>
 
         <!-- 3. 판매 -->
-        <a href="step3.html" class="feature-card reveal" aria-label="SNS채널 자동 업로드 판매">
+        <article class="feature-card reveal" aria-label="SNS채널 자동 업로드 판매">
           <div class="feature-icon">📲</div>
           <div class="feature-step">STEP 03 · 판매</div>
           <h3 class="feature-title">판매 확산 자동화</h3>
@@ -1922,10 +1678,10 @@ footer {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </span>
-        </a>
+        </article>
 
         <!-- 4. 광고 -->
-        <a href="step4.html" class="feature-card reveal" aria-label="SNS 광고 자동 운영">
+        <article class="feature-card reveal" aria-label="SNS 광고 자동 운영">
           <div class="feature-icon">📣</div>
           <div class="feature-step">STEP 04 · 광고</div>
           <h3 class="feature-title">SNS 광고 자동 운영</h3>
@@ -1939,10 +1695,10 @@ footer {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </span>
-        </a>
+        </article>
 
         <!-- 5. 발주 -->
-        <a href="step5.html" class="feature-card reveal" aria-label="주문 발주 자동 처리">
+        <article class="feature-card reveal" aria-label="주문 발주 자동 처리">
           <div class="feature-icon">📦</div>
           <div class="feature-step">STEP 05 · 발주</div>
           <h3 class="feature-title">주문·발주 자동 처리</h3>
@@ -1956,116 +1712,7 @@ footer {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </span>
-        </a>
-      </div>
-
-      <!-- "5가지 핵심 기능 전체 보기" button -->
-      <div class="features-all-link reveal">
-        <a href="features.html" class="btn-primary" style="margin-top:16px;">📋 5가지 핵심 기능 전체 보기</a>
-      </div>
-
-      <!-- Down Arrow → SNS Hub -->
-      <div class="section-down-arrow">
-        <button class="down-arrow-btn" data-scroll-to="#sns-hub" aria-label="SNS 자동 업로드 허브 섹션으로">
-          <span>자동 업로드 허브 보기</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════
-       SECTION 5.5: SNS 자동 업로드 허브 (히어로 이미지 이동)
-  ══════════════════════════════════════════ -->
-  <section id="sns-hub" class="section section-cobalt" aria-label="SNS 자동 업로드 허브" style="text-align:center;">
-    <div class="container">
-      <div class="section-tag">📱 멀티채널 자동 업로드</div>
-      <h2 class="section-title reveal">
-        모든 SNS 채널에<br />
-        <span class="accent">한 번에 자동 업로드</span>
-      </h2>
-      <p class="section-desc centered reveal">
-        인스타그램, 카카오톡, 블로그, 페이스북, 네이버밴드 등<br />
-        모든 채널에 상품을 자동으로 업로드하고 통계를 한눈에 관리합니다.
-      </p>
-
-      <!-- SNS 자동 업로드 허브 이미지 (첨부 이미지 2번) -->
-      <div class="hero-image-wrap reveal" style="margin-top:40px;">
-        <img
-          src="images/hero-sns-upload.png"
-          alt="SNS AUTO - 인스타그램, 카카오톡, 블로그, 페이스북 등 멀티채널 자동 업로드 대시보드"
-          loading="lazy"
-        />
-      </div>
-
-      <!-- Key Stats -->
-      <div class="hero-stats reveal" style="margin-top:40px;">
-        <div class="stat-item">
-          <div class="stat-num"><span data-count="5">0</span>개</div>
-          <div class="stat-label">완전 자동화 단계</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num"><span data-count="90">0</span>%</div>
-          <div class="stat-label">업무 시간 절감</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num"><span data-count="30">0</span>분</div>
-          <div class="stat-label">일평균 운영 시간</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num"><span data-count="560">0</span>%</div>
-          <div class="stat-label">평균 ROAS</div>
-        </div>
-      </div>
-
-      <!-- Down Arrow → AI Detail Page -->
-      <div class="section-down-arrow">
-        <button class="down-arrow-btn" data-scroll-to="#ai-detail" aria-label="AI 상세페이지 섹션으로">
-          <span>AI 상세페이지 자동 생성</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════
-       SECTION 5.7: AI 자동 생성 상세페이지
-       이미지 7: Before/After AI 상세페이지 비교
-  ══════════════════════════════════════════ -->
-  <section id="ai-detail" class="section section-dark" aria-label="AI 상세페이지 자동 생성" style="text-align:center;">
-    <div class="container">
-      <div class="section-tag">🤖 AI 자동 생성</div>
-      <h2 class="section-title reveal">
-        고퀄리티 상세페이지가<br />
-        <span class="accent">자동 완성!</span>
-      </h2>
-      <p class="section-desc centered reveal">
-        밋밋한 상품 이미지를 AI가 매력적인 상세페이지로 자동 변환합니다.<br />
-        고퀄리티 이미지, 매력적인 카피, 신뢰도 향상까지 — 구매 전환율 UP!
-      </p>
-
-      <!-- AI 상세페이지 Before/After 이미지 (첨부 이미지 7번) -->
-      <div class="flow-image reveal" style="margin-top:40px;">
-        <img
-          src="images/ai-detail-page.png"
-          alt="AI 자동 생성 - Before 밋밋한 이미지 vs After 고퀄리티 상세페이지 자동 완성"
-          loading="lazy"
-        />
-      </div>
-
-      <!-- AI 자동 생성 주요 포인트 -->
-      <div class="freedom-tags reveal" style="margin-top:32px;">
-        <span class="freedom-tag">🖼️ 고퀄리티 이미지</span>
-        <span class="freedom-tag">✍️ 매력적인 카피</span>
-        <span class="freedom-tag">📈 신뢰도 향상</span>
-        <span class="freedom-tag">🤖 AI 자동 생성</span>
-        <span class="freedom-tag">⏰ 시간 절약</span>
+        </article>
       </div>
 
       <!-- Down Arrow → Analytics -->
@@ -2259,10 +1906,10 @@ footer {
         </div>
       </div>
 
-      <!-- Down Arrow → Apply -->
+      <!-- Down Arrow → Final CTA -->
       <div class="section-down-arrow">
-        <button class="down-arrow-btn" data-scroll-to="#apply" aria-label="신청서 섹션으로">
-          <span>지금 신청하기</span>
+        <button class="down-arrow-btn" data-scroll-to="#final-cta" aria-label="최종 CTA 섹션으로">
+          <span>지금 시작하기</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <polyline points="6 9 12 15 18 9" />
           </svg>
@@ -2273,104 +1920,36 @@ footer {
 
 
   <!-- ══════════════════════════════════════════
-       SECTION 8.5: BRAND CTA IMAGE
-       이미지 6: 브랜드 최종 메시지
+       SECTION 9: FINAL CTA
+       이미지 6: 브랜드 최종 히어로 / CTA
   ══════════════════════════════════════════ -->
-  <section class="section section-dark" style="text-align:center;padding-bottom:0;" aria-label="브랜드 메시지">
-    <div class="container">
-      <div class="flow-image reveal" style="max-width:800px;margin:0 auto;">
-        <img
-          src="images/brand-cta.png"
-          alt="이젠 SNS AUTO로 자유하세요! 편안! 자유! 자동수익!"
-          loading="lazy"
-        />
-      </div>
+  <section id="final-cta" class="final-cta" aria-label="최종 행동 유도 섹션">
+    <!-- Image 6: Brand CTA -->
+    <div class="cta-image reveal">
+      <img
+        src="images/brand-cta.png"
+        alt="SNS AUTO - 이젠 SNS AUTO로 자유하세요! 편안! 자유! 자동수익! 브랜드 최종 메시지"
+        loading="lazy"
+      />
     </div>
-  </section>
 
+    <h2 class="final-cta-title reveal">
+      이제 내 샵에서<br />
+      <span class="accent">자동으로 돌아가는</span><br />
+      수익 시스템으로 자유를 누리세요
+    </h2>
 
-  <!-- ══════════════════════════════════════════
-       SECTION 9: SNS AUTO 신청서
-  ══════════════════════════════════════════ -->
-  <section id="apply" class="apply-section" aria-label="SNS AUTO 신청서">
-    <div class="container">
-      <div class="apply-card">
-        <h2 class="apply-title">SNS AUTO 신청서</h2>
+    <p class="final-cta-sub reveal">
+      🔥 편안! &nbsp;🕊️ 자유! &nbsp;💰 자동수익!
+    </p>
 
-        <!-- 6-step prerequisite guide -->
-        <div class="apply-guide">
-          <h4>📋 시작 전 준비사항</h4>
-          <div class="apply-guide-step">
-            <div class="apply-guide-num">1</div>
-            <div class="apply-guide-text">네이버밴드앱설치 및 회원가입</div>
-          </div>
-          <div class="apply-guide-step">
-            <div class="apply-guide-num">2</div>
-            <div class="apply-guide-text">판매할밴드채널 개설</div>
-          </div>
-          <div class="apply-guide-step">
-            <div class="apply-guide-num">3</div>
-            <div class="apply-guide-text">취급상품 카테고리결정</div>
-          </div>
-          <div class="apply-guide-step">
-            <div class="apply-guide-num">4</div>
-            <div class="apply-guide-text">대표(대문)이미지 1장이상준비</div>
-          </div>
-          <div class="apply-guide-step">
-            <div class="apply-guide-num">5</div>
-            <div class="apply-guide-text">채널소개글 작성</div>
-          </div>
-          <div class="apply-guide-step">
-            <div class="apply-guide-num">6</div>
-            <div class="apply-guide-text">상기 준비완료후 아래양식을 작성하여 제출해 주세요</div>
-          </div>
-        </div>
-
-        <div class="apply-divider"></div>
-
-        <!-- Application form -->
-        <form id="applyForm" onsubmit="return handleApply(event)">
-          <div class="apply-form-grid">
-            <div class="apply-form-group">
-              <label>채널이름 <span class="req">*</span></label>
-              <input type="text" name="channelName" placeholder="예) 가족함께수산" required />
-            </div>
-            <div class="apply-form-group">
-              <label>채널주소 <span class="req">*</span></label>
-              <input type="text" name="channelUrl" placeholder="https://band.us/@..." required />
-            </div>
-            <div class="apply-form-group full">
-              <label>취급상품 <span class="req">*</span></label>
-              <div class="apply-checkbox-grid">
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="seafood" /><span>수산물</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="agriculture" /><span>농산물</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="meat" /><span>축산물</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="health" /><span>건강식품</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="processed" /><span>가공식품</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="living" /><span>생활용품</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="fashion" /><span>패션/잡화</span></label>
-                <label class="apply-checkbox-item"><input type="checkbox" name="productType" value="etc" /><span>기타</span></label>
-              </div>
-            </div>
-            <div class="apply-form-group">
-              <label>담당자 <span class="req">*</span></label>
-              <input type="text" name="managerName" placeholder="예) 김바다" required />
-            </div>
-            <div class="apply-form-group">
-              <label>연락처 <span class="req">*</span></label>
-              <input type="tel" name="phone" placeholder="예) 010-1234-5678" required />
-            </div>
-            <div class="apply-form-group full">
-              <label>이메일</label>
-              <input type="email" name="email" placeholder="예) shop@email.com" />
-            </div>
-          </div>
-          <div class="apply-submit">
-            <button type="submit" class="btn-primary">신청서 제출하기</button>
-          </div>
-          <p class="apply-submit-note">✓ 무료 체험 가능 · ✓ 설치는 담당자가 직접 도와드립니다</p>
-        </form>
-      </div>
+    <div class="final-cta-buttons reveal" id="contact">
+      <a href="https://band.us/@withfamily" target="_blank" rel="noopener noreferrer" class="btn-free">
+        🚀 무료 상담 신청하기
+      </a>
+      <a href="#features" class="btn-secondary" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);">
+        📋 기능 다시 보기
+      </a>
     </div>
   </section>
 
@@ -2380,28 +1959,20 @@ footer {
   ══════════════════════════════════════════ -->
   <footer role="contentinfo">
     <div class="footer-logo">SNS AUTO</div>
-    <p class="footer-slogan">SaaS + 커머스 + 자동화 플랫폼 · 당신의 샵과 삶이 자동으로 자유해 집니다</p>
+    <p class="footer-slogan">SaaS + 커머스 + 자동화 플랫폼 · 여러분의 샵이 자동으로 자유합니다</p>
 
     <nav class="footer-links" aria-label="하단 링크 모음">
       <a href="#freedom">자동화 자유</a>
       <a href="#before-after">비포/애프터</a>
       <a href="#reviews">후기 &amp; 사례</a>
       <a href="#features">5단계 자동화</a>
-      <a href="#sns-hub">자동 업로드</a>
-      <a href="#ai-detail">AI 상세페이지</a>
       <a href="#analytics">성과 대시보드</a>
       <a href="#logistics">발주 자동화</a>
-      <a href="#apply">신청서</a>
+      <a href="#contact">상담 신청</a>
     </nav>
 
     <p class="footer-copy">© 2025 SNS AUTO. All rights reserved. &nbsp;|&nbsp; 이젠 자동으로 자유하세요 🕊️</p>
   </footer>
-
-
-  <!-- ══════════════════════════════════════════
-       TOAST
-  ══════════════════════════════════════════ -->
-  <div class="toast" id="toast">✅ 신청이 완료되었습니다!</div>
 
 
   <script>
@@ -2460,11 +2031,9 @@ const siteNav = document.querySelector('.nav');
 if (siteNav) {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
-      siteNav.style.background = 'rgba(255,255,255,0.97)';
-      siteNav.style.boxShadow = '0 1px 8px rgba(0,0,0,0.06)';
+      siteNav.style.background = 'rgba(13,27,46,0.97)';
     } else {
-      siteNav.style.background = 'rgba(255,255,255,0.88)';
-      siteNav.style.boxShadow = 'none';
+      siteNav.style.background = 'rgba(13,27,46,0.88)';
     }
   }, { passive: true });
 }
@@ -2501,24 +2070,6 @@ const statObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('[data-count]').forEach(el => {
   statObserver.observe(el);
 });
-
-// Application form handler
-function handleApply(e) {
-  e.preventDefault();
-  const form = e.target;
-  const fd = new FormData(form);
-  const productTypes = fd.getAll('productType');
-  if (productTypes.length === 0) {
-    alert('취급상품을 1개 이상 선택해 주세요.');
-    return false;
-  }
-  alert('신청이 완료되었습니다!');
-  form.reset();
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2500);
-  return false;
-}
   </script>
 </body>
 </html>
